@@ -122,7 +122,7 @@ const config: Configuration = {
       ],
     }),
     new CleanWebpackPlugin(),
-    new Dotenv(),
+    new Dotenv({ path: './.env' }),
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
