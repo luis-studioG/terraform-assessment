@@ -66,3 +66,21 @@ command
 ### Either use normal Scss or SCSS Module
 
 Please don't fix these two ways of css styling. Pick either one of them for the entire project
+
+### GIT Conventions and PR standardizations
+
+- Branch naming convention
+
+|--Please create your branch name with following pattern only:
+
+"pattern": <type>/<task_id>
+
+Examples of acceptable branch names - feature/SG-12
+
+- Commit message convention
+
+|--Please make a commit with following patters only
+
+<type>[optional scope]: <description> [optional body] [optional footer(s)]
+
+Example - feat(SGELBG-123): user registration api
