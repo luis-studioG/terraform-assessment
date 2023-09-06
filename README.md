@@ -1,86 +1,67 @@
-# React CSR Boilerplate
-
-- Includes --
-  - React 18
-  - Redux
-  - Scss/SCSS Module
-  - Routing Setup
-  - .env file setup
-  - Basic styling setup
-  - Pre commit hook setup
-  - Linting setup (prettier and eslint)
-  - Build creation using Webpack 5
-  - Path Alias using @ (for creating path from the src)
-
-## Scripts
-
-| Script          | Description                                                                                   |
-| --------------- | --------------------------------------------------------------------------------------------- |
-| `npm install`   | Installs all dependencies                                                                     |
-| `npm start`     | Starts project in `development` environment                                                   |
-| `npm run build` | Builds the project for `production` environment                                               |
-| `npm run serve` | Builds the project for `production` environment and serve it on th port specified in the .env |
+# Vite boilerplate Frontend
 
 ## Folder structure
 
 ```
 #directory structure
-|--src
-  |--assets                   # This folder contains all the assets that are copied into the build folder eg. images
-      |--images
-      |--scss                 # contain global styling
-      ├── favicon             # favicon file
-      ├── manifest.json       # Provides information about an application (such as name, author, icon, and description)
-  |--components
-      |--general              # This folder contains all Global Reusable Components eg. button, input
-      |--flow                 # This folder contains the component (extended logic) for the routes component
-  |--App                      # Main Entry point
-  |--pages                    # This folder contains the route component
-  |--store
-      ├── createStore.js      # Create and instrument redux store
-      ├── rootReducers.js     # Reducer registry and injection
-      |--store.js                 # The Redux store configuration
-  |--utils                    # have utilities like your API wrapper, string utils etc
-  ├── index.jsx               # Application bootstrap and rendering
-  ├── Routes.js               # Contain the application routes definition
-  ├── index.html              # Main HTML page container
+├── .husky
+├── dist
+├── public
+    ├── ico.svg
+    ├── robots.txt
+├── src
+    ├── api                        // All related to data: API, Services, Mock, Tanstack Query
+    ├── application                // Main parts of the application like App.tsx, Route and related utils
+    ├── assets                     // Styles, fonts, images
+    ├── components                 // Components, separated to atoms, molecules and organisms
+        ├── atoms                  // Atoms: These are the building blocks, which cannot be further broken down
+        ├── molecules              // Molecules: Atoms grouped together form a single molecule
+        ├── organisms              // Organisms: Molecules joined together to create a part of the interface
+
+    ├── hooks                      // global scope hooks
+    ├── pages                      // app pages
+    ├── utils                      // global scope utility functions
+├── tailwind.config.js             // Tailwind configuration and Global Styles
+
 
 ```
 
+## Scripts
+
+| Script                      | Description                                  |
+| --------------------------- | -------------------------------------------- |
+| `pnpm run prepare`          | Installs husky                               |
+| `pnpm start`                | Starts dummy server and app in `development` |
+| `pnpm run dummy-server`     | Run dummy server using jsonServer            |
+| `pnpm run dev`              | Start dev server in `development`            |
+| `pnpm run build`            | Build for `production`                       |
+| `pnpm run serve`            | Locally preview `production` build           |
+| `pnpm run test`             | Run tests in watch mode, with coverage       |
+| `pnpm run test:ci`          | Run tests once, with coverage                |
+| `pnpm run format`           | Run prettier                                 |
+| `pnpm run lint`             | Run eslint                                   |
+| `pnpm run pre-commit-lint`  | Run linter on Git staged files               |
+| --------------------------- | -------------------------------------------- |
+
+- When you start your dev server in development, you can find you app running on
+  http://localhost:8000/ (Due to Google Identity configuration, if you'll use =>
+  http://127.0.0.1:8000 Google Auth will not work)
+
 ## Developer guidelines
 
-### .envtemplate
+Using [pnpm](https://pnpm.io/) as "Fast, disk space efficient package manager"
 
-Edit this template according to your project requirement, so that whoever clone your git repo will
-know what .env variables they need. Secret api key, token no. should be save in .env file and that
-file should not be push to remote git repo for security.
+### To install dependencies:
 
-### Remove Redux setup
+- `npm i pnpm -g`
+- `pnpm i`
 
-You can remove the store folder from the src directory. And make sure to remove the <Provider>
-Component from the `src/index/jsx' file. And also remove the npm packages using the following
-command
+* to install any new npm package run:
+  - `pnpm i <package-name>` to add to the dependencies
+  - `pnpm i <package-name> -D` to add to the devDependencies
 
-`npm uninstall react-redux redux redux-devtools-extension`
+### semgrepignore file:
 
-### Either use normal Scss or SCSS Module
-
-Please don't fix these two ways of css styling. Pick either one of them for the entire project
-
-### GIT Conventions and PR standardizations
-
-- Branch naming convention
-
-|--Please create your branch name with following pattern only:
-
-"pattern": <type>/<task_id>
-
-Examples of acceptable branch names - feature/SG-12
-
-- Commit message convention
-
-|--Please make a commit with following patters only
-
-<type>[optional scope]: <description> [optional body] [optional footer(s)]
-
-Example - feat(SGELBG-123): user registration api
+To enable Admins to view feedback descriptions safely, we sanitized potentially vulnerable HTML code
+before rendering. This resolved security concerns and allowed us to skip the security scan for the
+said component by adding a "semgrepignore" file to the CI/CD pipeline.

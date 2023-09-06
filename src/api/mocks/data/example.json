@@ -1,0 +1,42 @@
+[
+  {
+    "statusCode": 200,
+    "message": "Success",
+    "data": {
+      "id": "faa782a6-1e05-4254-bcba-97256f441d19",
+      "googleId": "105311298844031173519",
+      "firstName": "Pavlo",
+      "lastName": "Omelianchuk",
+      "email": "pavlo.omelianchuk@studiographene.com",
+      "profilePic": "https://lh3.googleusercontent.com/a/AGNmyxaYQoaKhA9LlL9XTJKJ2Y5dIaMwaSz7fBOxe7TQ=s96-c",
+      "jobTitle": "Software Engineer",
+      "isActive": true,
+      "isGithubIntegrationMandatory": true,
+      "isGithubIntegrated": false,
+      "createdAt": "2023-04-20T10:57:28.177Z",
+      "updatedAt": "2023-04-20T10:57:28.177Z",
+      "notification": {
+        "id": "c0f14ce6-6757-4d8b-892f-f44c9c8e9b48",
+        "userId": "faa782a6-1e05-4254-bcba-97256f441d19",
+        "email": true,
+        "createdAt": "2023-04-20T10:57:28.177Z",
+        "updatedAt": "2023-04-20T10:57:28.177Z"
+      },
+      "lastLoggedIn": {
+        "id": "bd8ed922-1808-4734-b46e-c279daf1d612",
+        "userId": "faa782a6-1e05-4254-bcba-97256f441d19",
+        "loggedAt": "2023-04-20T10:57:28.177Z"
+      },
+      "integrations": [],
+      "access": {
+        "id": "7c87a731-c229-4a72-b606-bc0432dabba6",
+        "userId": "faa782a6-1e05-4254-bcba-97256f441d19",
+        "role": "INDIVIDUAL",
+        "permissions": {},
+        "createdAt": "2023-04-20T10:57:28.177Z",
+        "updatedAt": "2023-04-20T10:57:28.177Z"
+      },
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYWE3ODJhNi0xZTA1LTQyNTQtYmNiYS05NzI1NmY0NDFkMTkiLCJlbWFpbCI6InBhdmxvLm9tZWxpYW5jaHVrQHN0dWRpb2dyYXBoZW5lLmNvbSIsImlzcyI6InN0dWRpb2dyYXBoZW5lIiwicm9sZSI6IklORElWSURVQUwiLCJwZXJtaXNzaW9ucyI6e30sImlhdCI6MTY4MTk4ODI0OCwiZXhwIjoxNjgzMTk3ODQ4fQ.2F4GV-WZJtCdqx6halrsX2jyOoAVSoyezSjd-R7cMlc"
+    }
+  }
+]
