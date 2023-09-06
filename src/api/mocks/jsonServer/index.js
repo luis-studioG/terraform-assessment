@@ -38,9 +38,6 @@ const expectedGoogleAuthSuccessfulServerResponseData = {
 // Custom middleware to access POST methids.
 // Can be customized for other HTTP method as well.
 server.use((req, res, next) => {
-  console.log('POST request listener');
-  //const body = req.body;
-  //endpoint for google login
   if (req.method === 'POST' && req.url === LOGIN) {
     res.statusText = 'Your have signed-up successfully';
     res.json(expectedGoogleAuthSuccessfulServerResponseData);
@@ -71,5 +68,6 @@ server.use((req, res, next) => {
 server.use(router);
 
 server.listen(3002, () => {
+  // eslint-disable-next-line no-console
   console.log('JSON Server is running on http://localhost:3002');
 });
