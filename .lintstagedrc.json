@@ -1,5 +1,0 @@
-{
-    "*.+(ts|tsx|js|jsx|css|html)": ["prettier --write"],
-    "*.+(js|jsx|ts|tsx)": ["eslint --ext .js,.jsx  --fix"]
-  }
-  
