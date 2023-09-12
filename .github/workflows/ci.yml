@@ -1,0 +1,17 @@
+name: studiographene-ci
+
+on:
+  pull_request: {}
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: studiographene/nodejs-ci/.github/workflows/ci.yml@master
+    with:
+      project_name: projectx-frontend
+      package_manager: pnpm
+      build_command: pnpm run build
+      lint_command: pnpm run lint
+      excluded_jobs: docker
+    secrets: inherit
+    permissions: write-all

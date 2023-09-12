@@ -1,0 +1,8 @@
+# Common large paths
+src/components/molecules/Modals/FeedbackDetailsModal/FeedbackDetailsModal.tsx
+src/components/organisms/NewEditProject/ProjectToolsTab/ProjectToolsTab.tsx
+src/pages/Feedback/Feedback.tsx
+src/api/mocks/data/example.json
+src/api/mocks/jsonServer/index.js
+src/components/molecules/AllProjects/AllProjects.spec.tsx
+src/components/molecules/MyProjects/MyProjects.spec.tsx

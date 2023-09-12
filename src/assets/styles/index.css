@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Founders Grotesk Medium';
+  src: url('../fonts/FoundersGrotesk-Medium.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Founders Grotesk Light';
+  src: url('../fonts/FoundersGrotesk-Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Founders Grotesk Regular';
+  src: url('../fonts/FoundersGrotesk-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Founders Grotesk Medium italic';
+  src: url('../fonts/FoundersGrotesk-MediumItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Founders Grotesk regular italic';
+  src: url('../fonts/FoundersGrotesk-RegularItalic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Founders Grotesk Light italic';
+  src: url('../fonts/FoundersGrotesk-LightItalic.otf') format('truetype');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* main breakpoint in all designs is 1440p */
+
+:root {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  scrollbar-gutter: stable both-edges;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  /* //styleName: Desktop/H2; */
+  .h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.56px;
+  }
+
+  /* //styleName: Desktop/H3; */
+  .h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: -0.36px;
+  }
+
+  /* //styleName: Desktop/Display default; */
+  .desktop-display-default {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17.25px;
+  }
+
+  /* //styleName: Desktop/Nav bar heading & small CTA; */
+  .nav-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.28px;
+  }
+
+  /* //styleName: Desktop/Paragraph default; */
+  .desktop-p-default {
+    font-family: 'Founders Grotesk Light', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19.2px;
+    letter-spacing: 0.2px;
+  }
+
+  /* //styleName: Desktop/Paragraph small; */
+  .desktop-p-small {
+    font-family: 'Founders Grotesk Light', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16.8px;
+    letter-spacing: 0.28px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+}
